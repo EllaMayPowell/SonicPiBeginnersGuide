@@ -1,0 +1,18 @@
+Sonic Pi code for radio
+
+live_loop :tst do
+  sample :testing, amp:1
+  sleep 8
+end
+
+
+live_loop :fos do
+  use_synth :pretty_bell
+  play choose(chord(:E2, :maj)), release: 0.3, cutoff: rrand(60, 120), amp:0.2
+  sleep 2
+end
+
+live_loop :fo do
+  sample :ellaeleventh
+  sleep 4
+end
